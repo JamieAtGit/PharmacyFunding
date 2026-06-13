@@ -156,12 +156,18 @@ const STEPS = [
 ];
 
 const WHY = [
-  { title: 'Sector specialists',        body: 'We understand NHS income streams, FP34s, dispensing data and how lenders assess pharmacy goodwill. That knowledge means your application is structured correctly from the start.' },
-  { title: 'Whole-of-market access',    body: 'We work with a wide panel of specialist pharmacy lenders — not just one bank. More options means better terms and a higher probability of approval.' },
-  { title: 'No fee to you',             body: 'We\'re paid commission by the lender who funds your transaction. We tell you the amount before the arrangement completes — full transparency, no hidden charges.' },
-  { title: 'Bespoke applications',      body: 'We don\'t send generic applications. Every submission is structured around your specific pharmacy, your numbers, and your ambitions.' },
-  { title: 'Start to finish',           body: 'From initial enquiry through to drawdown, we manage the process and the lender relationship. You focus on running your pharmacy.' },
-  { title: 'FCA regulated',             body: 'Pharmacy Funding is a trading style of Stoneacre Assets Limited, authorised and regulated by the Financial Conduct Authority (FCA No 1009039).' },
+  { title: 'Sector specialists',        body: 'We understand NHS income streams, FP34s, dispensing data and how lenders assess pharmacy goodwill. That knowledge means your application is structured correctly from the start.',
+    icon: '<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>' },
+  { title: 'Whole-of-market access',    body: 'We work with a wide panel of specialist pharmacy lenders — not just one bank. More options means better terms and a higher probability of approval.',
+    icon: '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>' },
+  { title: 'No fee to you',             body: 'We\'re paid commission by the lender who funds your transaction. We tell you the amount before the arrangement completes — full transparency, no hidden charges.',
+    icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>' },
+  { title: 'Bespoke applications',      body: 'We don\'t send generic applications. Every submission is structured around your specific pharmacy, your numbers, and your ambitions.',
+    icon: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>' },
+  { title: 'Start to finish',           body: 'From initial enquiry through to drawdown, we manage the process and the lender relationship. You focus on running your pharmacy.',
+    icon: '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>' },
+  { title: 'FCA regulated',             body: 'Pharmacy Funding is a trading style of Stoneacre Assets Limited, authorised and regulated by the Financial Conduct Authority (FCA No 1009039).',
+    icon: '<path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 0 0 1.946-.806 3.42 3.42 0 0 1 4.438 0 3.42 3.42 0 0 0 1.946.806 3.42 3.42 0 0 1 3.138 3.138 3.42 3.42 0 0 0 .806 1.946 3.42 3.42 0 0 1 0 4.438 3.42 3.42 0 0 0-.806 1.946 3.42 3.42 0 0 1-3.138 3.138 3.42 3.42 0 0 0-1.946.806 3.42 3.42 0 0 1-4.438 0 3.42 3.42 0 0 0-1.946-.806 3.42 3.42 0 0 1-3.138-3.138 3.42 3.42 0 0 0-.806-1.946 3.42 3.42 0 0 1 0-4.438 3.42 3.42 0 0 0 .806-1.946 3.42 3.42 0 0 1 3.138-3.138z"/>' },
 ];
 
 /* Selector: 4 user situations with descriptions and targeted chip links */
@@ -283,7 +289,8 @@ function buildWhyGrid() {
   if (!el) return;
   el.innerHTML = WHY.map((w, i) => `
     <div class="w rv${i > 0 ? ' d' + Math.min(i, 4) : ''}">
-      <h4><span class="d"></span>${w.title}</h4>
+      <div class="w-ic"><svg viewBox="0 0 24 24">${w.icon}</svg></div>
+      <h4>${w.title}</h4>
       <p>${w.body}</p>
     </div>
   `).join('');

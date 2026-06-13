@@ -315,12 +315,19 @@ p { line-height: 1.68; }
 .step h3 { font-size: 18px; margin-bottom: 6px; }
 .step p  { font-size: 15px; color: var(--ink-soft); line-height: 1.62; }
 
+/* ── Plus bullet list ────────────────────────────── */
+.plus-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 56px; }
+.plus-list li { display: flex; gap: 13px; align-items: flex-start; font-size: 15px; color: var(--ink-soft); line-height: 1.65; }
+.pl-ic { flex-shrink: 0; margin-top: 3px; width: 18px; height: 18px; }
+@media (max-width: 600px) { .plus-list { grid-template-columns: 1fr; } }
+
 /* ── Why grid ─────────────────────────────────────── */
 .why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-.w { padding: 26px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); margin: 4px; transition: background .2s, border-color .2s, box-shadow .2s; }
+.w { padding: 28px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); margin: 4px; transition: background .2s, border-color .2s, box-shadow .2s; }
 .w:hover { background: var(--white); border-color: rgba(12,173,114,.3); box-shadow: var(--shadow); }
-.w h4 { display: flex; align-items: center; gap: 10px; color: var(--ink); font-size: 14.5px; margin-bottom: 10px; }
-.w .d { width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg, #0CAD72, #1B65D4); flex-shrink: 0; }
+.w-ic { width: 46px; height: 46px; border-radius: 10px; background: var(--white); border: 2px solid var(--green); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; flex-shrink: 0; }
+.w-ic svg { width: 22px; height: 22px; stroke: var(--green); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.w h4 { color: var(--ink); font-size: 15px; margin-bottom: 10px; }
 .w p { font-size: 14px; color: var(--ink-soft); line-height: 1.62; }
 
 /* ── Contact ──────────────────────────────────────── */
@@ -461,30 +468,33 @@ footer ul li a:hover { color: #3dd99a; }
 
 /* ── FCA trust strip ──────────────────────────────── */
 .fca-strip {
-  background: var(--navy-2); padding: 48px 0;
+  background: var(--navy-2); padding: 22px 0;
   border-top: 1px solid rgba(255,255,255,.06);
   border-bottom: 1px solid rgba(255,255,255,.06);
 }
-.fca-strip .wrap { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.fca-strip .wrap { display: flex; align-items: center; gap: 36px; }
 .fca-badge {
-  display: flex; align-items: center; gap: 18px;
+  display: flex; align-items: center; gap: 14px; flex-shrink: 0;
   background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1);
-  border-radius: var(--radius-lg); padding: 18px 26px;
+  border-radius: var(--radius); padding: 12px 20px;
 }
 .fca-icon {
-  width: 50px; height: 50px; border-radius: 50%;
+  width: 38px; height: 38px; border-radius: 50%;
   background: linear-gradient(135deg, var(--green), var(--blue));
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
-.fca-icon svg { width: 24px; height: 24px; stroke: white; fill: none; stroke-width: 2.5; }
-.fca-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.38); }
-.fca-val { font-size: 15.5px; font-weight: 700; color: rgba(255,255,255,.9); margin-top: 3px; }
-.fca-reg { font-size: 12px; color: rgba(255,255,255,.38); margin-top: 2px; }
+.fca-icon svg { width: 19px; height: 19px; stroke: white; fill: none; stroke-width: 2.5; }
+.fca-label { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.38); }
+.fca-val { font-size: 14px; font-weight: 700; color: rgba(255,255,255,.9); margin-top: 2px; }
+.fca-reg { font-size: 11px; color: rgba(255,255,255,.38); margin-top: 1px; }
+.fca-strip-divider { width: 1px; height: 44px; background: rgba(255,255,255,.1); flex-shrink: 0; }
+.fca-trust-items { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 40px; }
 .fca-trust-item {
-  display: flex; align-items: center; gap: 12px;
-  font-size: 14px; font-weight: 500; color: rgba(255,255,255,.55);
+  display: flex; align-items: center; gap: 9px;
+  font-size: 13px; font-weight: 500; color: rgba(255,255,255,.55);
 }
-.fca-trust-item svg { width: 18px; height: 18px; stroke: #3dd99a; fill: none; flex-shrink: 0; }
+.fca-trust-item:last-child { grid-column: 1 / -1; }
+.fca-trust-item svg { width: 15px; height: 15px; stroke: #3dd99a; fill: none; flex-shrink: 0; }
 /* FCA mark in footer brand column */
 .fca-mark {
   display: inline-flex; align-items: center; gap: 8px;
@@ -710,8 +720,11 @@ footer .fca-mark { margin-top: 18px; }
   .photo-row     { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 768px) {
-  .fca-strip .wrap   { flex-direction: column; gap: 20px; }
-  .fca-badge         { width: 100%; }
+  .fca-strip .wrap      { flex-direction: column; gap: 20px; }
+  .fca-badge            { width: 100%; }
+  .fca-strip-divider    { width: 100%; height: 1px; }
+  .fca-trust-items      { grid-template-columns: 1fr; }
+  .fca-trust-item:last-child { grid-column: auto; }
   .values-grid       { grid-template-columns: 1fr; }
   .expect-grid       { grid-template-columns: 1fr; }
   .photo-row         { grid-template-columns: 1fr; }
