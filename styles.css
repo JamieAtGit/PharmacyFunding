@@ -366,10 +366,10 @@ p { line-height: 1.68; }
 .callout h4 { margin-bottom: 14px; }
 
 /* ── Footer ───────────────────────────────────────── */
-footer { background: var(--navy); color: rgba(255,255,255,.55); padding: 64px 0 40px; position: relative; }
+footer { background: var(--navy); color: rgba(255,255,255,.55); padding: 44px 0 28px; position: relative; }
 /* Green-to-blue gradient border — mirrors header */
 footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #0CAD72 0%, #1B65D4 100%); opacity: .8; }
-.fcols { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.07); }
+.fcols { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 36px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,.07); }
 .strap { font-size: 12.5px; font-style: italic; color: rgba(255,255,255,.32); margin-top: 4px; letter-spacing: .03em; }
 footer ul { display: flex; flex-direction: column; gap: 9px; }
 footer ul li a { font-size: 14px; color: rgba(255,255,255,.48); transition: color .2s; }
