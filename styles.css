@@ -330,6 +330,13 @@ p { line-height: 1.68; }
 .w h4 { color: var(--ink); font-size: 15px; margin-bottom: 10px; }
 .w p { font-size: 14px; color: var(--ink-soft); line-height: 1.62; }
 
+/* ── Contact slogan band ─────────────────────────── */
+.slogan-band { background: var(--white); padding: 28px 0; border-bottom: 1px solid var(--border); }
+.slogan-inner { display: flex; align-items: center; gap: 24px; justify-content: center; }
+.slogan-rule { flex: 1; max-width: 120px; height: 1px; background: linear-gradient(90deg, transparent, rgba(12,173,114,.35)); }
+.slogan-rule:last-child { background: linear-gradient(90deg, rgba(27,101,212,.35), transparent); }
+.slogan-text { font-family: var(--font-h); font-size: clamp(16px, 2vw, 22px); font-weight: 500; font-style: italic; color: var(--ink); letter-spacing: -.01em; text-align: center; white-space: nowrap; }
+
 /* ── Contact ──────────────────────────────────────── */
 .contact-grid { display: grid; grid-template-columns: 360px 1fr; gap: 60px; align-items: start; }
 .cinfo { display: flex; flex-direction: column; gap: 20px; }
@@ -549,6 +556,61 @@ footer ul li a:hover { color: #3dd99a; }
 }
 .slide-dot.active { background: #3dd99a; transform: scale(1.35); }
 
+/* ── Detail page ──────────────────────────────────── */
+.photo-hero {
+  margin-top: -68px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 152px 0 88px;
+  overflow: hidden;
+}
+.photo-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(120deg, rgba(7,14,28,.88) 0%, rgba(7,14,28,.52) 60%, rgba(7,14,28,.3) 100%);
+}
+.photo-hero .wrap { position: relative; z-index: 1; }
+.photo-hero .eyebrow { color: rgba(255,255,255,.5); }
+.photo-hero h1 { color: var(--white); font-size: clamp(30px, 4.5vw, 58px); max-width: 20ch; margin-top: 12px; }
+.photo-hero .sub { color: rgba(255,255,255,.7); margin-top: 18px; max-width: 54ch; font-size: clamp(15px, 1.3vw, 17px); line-height: 1.65; }
+.photo-hero .cta-btn { margin-top: 32px; }
+
+.detail-sec { padding: 72px 0; }
+.detail-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
+.detail-grid h2 { font-size: clamp(22px, 2.5vw, 34px); }
+
+.detail-how { list-style: none; padding: 0; margin-top: 28px; display: flex; flex-direction: column; border-top: 1px solid var(--border); }
+.detail-how li { font-size: 15.5px; color: var(--ink-soft); line-height: 1.75; padding: 18px 0; border-bottom: 1px solid var(--border); }
+
+.suitable-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.suitable-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: var(--ink-soft); line-height: 1.6; }
+.suit-ic { flex-shrink: 0; margin-top: 2px; width: 18px; height: 18px; }
+
+.sim-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.sim-card { text-decoration: none; display: block; color: inherit; cursor: pointer; }
+.sim-card:hover { border-color: rgba(12,173,114,.3); box-shadow: var(--shadow); }
+.sim-card .fcard-link { pointer-events: none; }
+
+.fcard-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 18px; font-size: 13px; font-weight: 600;
+  color: var(--green); text-decoration: none;
+  transition: gap .2s;
+}
+.fcard-link svg { width: 14px; height: 14px; stroke: var(--green); }
+.fcard:hover .fcard-link, .sim-card:hover .fcard-link { gap: 10px; }
+
+@media (max-width: 860px) {
+  .detail-grid { grid-template-columns: 1fr; gap: 24px; }
+  .sim-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 540px) {
+  .photo-hero { padding: 128px 0 60px; }
+  .detail-sec { padding: 48px 0; }
+  .sim-grid { grid-template-columns: 1fr; }
+}
+
 /* ── CTA band (pre-footer) ────────────────────────── */
 .cta-band {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
@@ -574,6 +636,10 @@ footer ul li a:hover { color: #3dd99a; }
 .cta-band p { color: rgba(255,255,255,.55); font-size: clamp(15px, 1.3vw, 17.5px); margin-top: 14px; }
 .cta-band .actions { justify-content: center; margin-top: 32px; }
 .cta-band .cta-btn.ghost { border-color: rgba(255,255,255,.25); color: rgba(255,255,255,.8); }
+
+/* ── About page ───────────────────────────────────── */
+.about-body p { color: var(--ink-soft); font-size: 16px; line-height: 1.75; margin-bottom: 18px; }
+.about-body p:last-child { margin-bottom: 0; }
 
 /* ── About page — team section ────────────────────── */
 .team-section {
