@@ -280,7 +280,7 @@ const DETAIL = {
     similar: ['acquisition', 'group-growth', 'refinance'],
   },
   asset: {
-    image: 'images/truck-sunset.jpg', imagePos: 'center 40%', optNum: '07',
+    image: 'images/mach4.png', imagePos: 'center center', imageSize: '85%', optNum: '07',
     what: 'Asset Finance allows you to fund capital equipment — dispensing robots, PMR systems, delivery vehicles, refrigeration, and other clinical or operational assets — without drawing on working capital or cash reserves. The asset itself or the pharmacy\'s income provides the security, keeping your balance sheet flexible and your cash available for the business.',
     how: [
       'Hire Purchase: Fixed monthly payments, you own the asset at the end of the term. Asset sits on your balance sheet with tax-deductible depreciation.',
@@ -531,7 +531,7 @@ function buildDetail() {
   }).join('');
 
   root.innerHTML = `
-    <div class="photo-hero" style="background-image:url('${detail.image}');background-position:${detail.imagePos}">
+    <div class="photo-hero" style="background-image:url('${detail.image}');background-position:${detail.imagePos};background-size:${detail.imageSize || 'cover'}">
       <div class="wrap">
         <span class="eyebrow">Option ${detail.optNum}</span>
         <h1>${funding.title}</h1>
