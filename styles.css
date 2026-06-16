@@ -650,6 +650,9 @@ footer ul li a:hover { color: #3dd99a; }
 /* ── About page ───────────────────────────────────── */
 .about-body p { color: var(--ink-soft); font-size: 16px; line-height: 1.75; margin-bottom: 18px; }
 .about-body p:last-child { margin-bottom: 0; }
+.about-cols { columns: 2; column-gap: 52px; }
+.about-cols p { color: var(--ink-soft); font-size: 15.5px; line-height: 1.78; margin-bottom: 20px; break-inside: avoid; }
+.about-cols p:last-child { margin-bottom: 0; }
 
 /* ── About page — team section ────────────────────── */
 .team-section {
@@ -807,6 +810,7 @@ footer .fca-mark { margin-top: 18px; }
   .footer-cta-row    { flex-direction: column; text-align: center; }
   .cta-band          { padding: 64px 0; }
   .slide-overlay     { width: 100%; padding: 40px clamp(16px, 3.5vw, 32px); position: relative; background: var(--navy); }
+  .about-cols        { columns: 1; }
 }
 @media (max-width: 480px) {
   .slides { aspect-ratio: 4/3; }
