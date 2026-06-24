@@ -429,6 +429,7 @@ footer ul li a:hover { color: #3dd99a; }
   .fgrid   { grid-template-columns: 1fr; }
   .strip .wrap { grid-template-columns: 1fr; }
   .strip .item { border-right: none; }
+  .strip .item:last-child { border-bottom: none; }
   .choices { grid-template-columns: 1fr 1fr; }
   .why     { grid-template-columns: 1fr; }
   .frow    { grid-template-columns: 1fr; }
@@ -436,10 +437,23 @@ footer ul li a:hover { color: #3dd99a; }
   .prose-grid { grid-template-columns: 1fr; }
   .selector   { padding: 28px 20px; }
   .fcols { grid-template-columns: 1fr; gap: 32px; }
+  .hero .wrap { padding-top: 88px; padding-bottom: 40px; }
+  .twohead { margin-bottom: 32px; }
+  .map-wrap { height: 280px; margin-top: 40px; }
 }
 @media (max-width: 480px) {
   .choices     { grid-template-columns: 1fr; }
   .util .right { display: none; }
+  .slogan-text { white-space: normal; text-align: center; }
+  .slogan-rule { display: none; }
+  .slogan-inner { flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .ss-body     { display: none; }
+  .slides      { min-height: 320px; }
+  .hero .wrap  { gap: 28px; }
+  .actions     { gap: 10px; }
+  .cta-btn     { width: 100%; justify-content: center; }
+  .cta-band .cta-btn { width: auto; }
+  section      { padding: clamp(44px, 6vw, 60px) 0; }
 }
 
 /* ── Page hero (inner pages) ──────────────────────── */
@@ -809,10 +823,14 @@ footer .fca-mark { margin-top: 18px; }
   .photo-row         { grid-template-columns: 1fr; }
   .footer-cta-row    { flex-direction: column; text-align: center; }
   .cta-band          { padding: 64px 0; }
-  .slide-overlay     { width: 100%; padding: 40px clamp(16px, 3.5vw, 32px); position: relative; background: var(--navy); }
+  .slides            { min-height: 420px; }
+  .slide-overlay     { position: absolute; top: auto; bottom: 0; left: 0; right: 0; width: 100%; padding: 56px 20px 32px; background: linear-gradient(transparent, rgba(7,14,28,.93) 28%); justify-content: flex-end; }
+  .slide-overlay h2  { font-size: clamp(17px, 5.5vw, 26px); max-width: none; }
   .about-cols        { columns: 1; }
 }
 @media (max-width: 480px) {
-  .slides { aspect-ratio: 4/3; }
-  .slides { min-height: 340px; }
+  .photo-hero  { padding: 110px 0 48px; }
+  .detail-sec  { padding: 40px 0; }
+  .sim-grid    { grid-template-columns: 1fr; }
+  .slide-nav-btn { top: 36%; }
 }
