@@ -389,10 +389,10 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
 footer ul { display: flex; flex-direction: column; gap: 9px; }
 footer ul li a { font-size: 14px; color: rgba(255,255,255,.48); transition: color .2s; }
 footer ul li a:hover { color: #3dd99a; }
-.legal { padding-top: 30px; font-size: 12px; color: rgba(255,255,255,.28); line-height: 1.72; }
+.legal { padding-top: 30px; font-size: 12px; color: rgba(255,255,255,.78); line-height: 1.72; }
 .legal p { margin-bottom: 10px; }
 .legal p:last-child { margin-bottom: 0; }
-.legal strong { color: rgba(255,255,255,.48); }
+.legal strong { color: rgba(255,255,255,.95); }
 
 /* ── Scroll reveal ────────────────────────────────── */
 .rv { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
