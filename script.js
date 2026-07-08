@@ -20,13 +20,13 @@ const FUNDING = [
     id:    'acquisition',
     title: 'Pharmacy Acquisition Finance',
     desc:  'For buying an existing pharmacy or starting ownership for the first time.',
-    hl:    'Up to 85% LTV — potentially 100%',
+    hl:    'Up to 80% LTV — potentially 100%',
     items: [
       'Purchase of independent pharmacies',
       'Group acquisitions',
       'First-time buyers',
       'Goodwill + property acquisition',
-      'Loan to value up to 85% (potentially 100% depending on circumstances)',
+      'Loan to value up to 80% (potentially 100% depending on circumstances)',
     ],
   },
   {
@@ -121,8 +121,8 @@ const DETAIL = {
     what: 'Acquisition finance is a loan structured to fund the purchase of a pharmacy — covering the goodwill (the value of the business), fixtures and fittings, and in some cases the property itself. It is structured specifically around the NHS income and dispensing data of the pharmacy being acquired, not standard business metrics.',
     how: [
       'Lenders assess the pharmacy\'s dispensing volumes, FP34 NHS income and profitability alongside the purchase price — a completely different framework to a standard commercial loan.',
-      'Most deals run over 5–10 years with capital and interest repayments calibrated to the pharmacy\'s monthly cash flow.',
-      'LTV is typically up to 85% of the purchase price. 100% can be achievable if you have an existing pharmacy or property to offer as additional security.',
+      'Most deals run over 5–15 years with capital and interest repayments calibrated to the pharmacy\'s monthly cash flow.',
+      'LTV is typically up to 80% of the purchase price. 100% can be achievable if you have an existing pharmacy or property to offer as additional security.',
       'We present your case exclusively to specialist pharmacy lenders and manage the application from first enquiry through to drawdown.',
     ],
     suitable: [
@@ -196,7 +196,7 @@ const DETAIL = {
   },
   property: {
     image: 'images/pharmacy-counter.jpg', imagePos: 'center 30%', optNum: '04',
-    what: 'Commercial Property Finance covers the purchase of the freehold of your pharmacy premises, a commercial mortgage to refinance existing property debt, or finance for mixed-use buildings where your pharmacy occupies the ground floor. Owning your freehold removes lease renewal uncertainty and creates a long-term appreciating asset alongside your business.',
+    what: 'Commercial Property Finance covers the purchase of the freehold of your pharmacy premises, a commercial mortgage to refinance existing property debt, or finance for mixed-use buildings where your pharmacy occupies the ground floor. Owning your freehold removes lease renewal uncertainty.',
     how: [
       'Lenders assess property value, the strength of the tenancy (underpinned by NHS income), and your ability to service the debt.',
       'LTV is typically up to 70–75% on commercial property, though specialist pharmacy lenders can often go higher where the pharmacy income is strong.',
@@ -260,7 +260,7 @@ const DETAIL = {
       'You want to buy out your co-owner and take full control of the business',
       'A partner is retiring and you need to fund the buy-out of their share',
       'You are bringing in a new partner and they need finance to fund their stake',
-      'A partnership agreement\'s put or call option is being exercised',
+      'A partnership agreement\'s put and call option is being exercised',
     ],
     steps: [
       { n: '01', title: 'Partnership overview', text: 'Share the current ownership structure, the proposed change, and the agreed or estimated value of the share being transferred.' },
@@ -276,10 +276,10 @@ const DETAIL = {
     image: 'images/mach4.png', imagePos: 'center center', imageSize: '85%', optNum: '07',
     what: 'Asset Finance allows you to fund capital equipment — dispensing robots, PMR systems, delivery vehicles, refrigeration, and other clinical or operational assets — without drawing on working capital or cash reserves. The asset itself or the pharmacy\'s income provides the security, keeping your balance sheet flexible and your cash available for the business.',
     how: [
-      'Hire Purchase: Fixed monthly payments, you own the asset at the end of the term. Asset sits on your balance sheet with tax-deductible depreciation.',
-      'Finance Lease: You use the asset over a fixed term and return or refinance it at the end — often used for technology that may become obsolete.',
-      'Operating Lease: Off-balance-sheet arrangement. Asset returned at end of term. Suited to vehicles and equipment you want to upgrade regularly.',
-      'Finance for smaller items can often be arranged within 24–48 hours, making this one of the fastest forms of pharmacy finance available.',
+      'Hire Purchase: Fixed monthly payments to acquire the asset. Once all payments (and any option-to-purchase fee) have been made, ownership transfers to you. The asset is generally recognised on your balance sheet, and businesses can typically claim tax relief through capital allowances (or depreciation for accounting purposes, depending on the jurisdiction and tax rules).',
+      'Finance Lease: You lease the asset for most of its useful life, making fixed rental payments. At the end of the term, you may continue leasing, refinance, sell the asset on behalf of the lessor, or return it, depending on the agreement. Often used for higher-value equipment and technology.',
+      'Operating Lease: A rental agreement where you use the asset for a fixed period and typically return it at the end of the lease. Often suited to vehicles and equipment that you want to upgrade regularly. (Accounting treatment depends on the accounting standards applicable to your business.)',
+      'Speed of arranging finance: Finance for smaller items can often be arranged within 24–48 hours (subject to lender approval), making asset finance one of the quicker funding options available to pharmacies.',
     ],
     suitable: [
       'You are investing in a dispensing robot, carousel, or pharmacy automation system',
@@ -291,21 +291,21 @@ const DETAIL = {
     steps: [
       { n: '01', title: 'Equipment details', text: 'Tell us what you\'re buying, the supplier, and the quoted price. A pro-forma invoice speeds things up significantly.' },
       { n: '02', title: 'Quick assessment', text: 'For most equipment we can provide indicative terms within 24 hours — no lengthy fact-find required for smaller items.' },
-      { n: '03', title: 'Structure decision', text: 'We advise on the most appropriate structure — hire purchase, finance lease, or operating lease — based on your tax position.' },
-      { n: '04', title: 'Documents signed', text: 'Straightforward process with minimal paperwork, particularly for pharmacies with a clean credit and trading history.' },
-      { n: '05', title: 'Supplier paid', text: 'Funds paid directly to the supplier on your behalf. You take delivery of the equipment.' },
-      { n: '06', title: 'Asset in use', text: 'Fixed monthly repayments begin. Asset operational and delivering operational return from day one.' },
+      { n: '03', title: 'Documents signed', text: 'Straightforward process with minimal paperwork, particularly for pharmacies with a clean credit and trading history.' },
+      { n: '04', title: 'Supplier paid', text: 'Funds paid directly to the supplier on your behalf. You take delivery of the equipment.' },
+      { n: '05', title: 'Asset in use', text: 'Fixed monthly repayments begin. Asset operational and delivering operational return from day one.' },
     ],
     similar: ['refurb', 'working-capital', 'acquisition'],
   },
   'working-capital': {
     image: 'images/currency-world.jpg', imagePos: 'center center', optNum: '08',
-    what: 'Working Capital Finance helps pharmacies manage the cash flow gaps that arise from NHS monthly payment cycles, stock purchasing, staffing costs, and seasonal fluctuations in prescription volumes. A dedicated facility provides a structured, cost-effective solution sized to your actual dispensing income — rather than an expensive, generic bank overdraft.',
+    what: 'Working Capital Finance helps pharmacies manage the cash flow gaps that arise from NHS monthly payment cycles, stock purchasing, staffing costs and seasonal fluctuations in prescription volumes. Depending on your needs, solutions may include dedicated working capital facilities such as revolving credit facilities, business overdrafts or invoice finance, providing flexible access to funds to support day-to-day operations and business growth.',
     how: [
-      'A revolving credit facility works like a flexible loan: you draw down and repay as needed, paying interest only on the balance you use at any given time.',
-      'Invoice finance releases cash against your NHS FP34 income before the payment is received, directly reducing the gap between dispensing and receipt of funds.',
-      'Facilities are sized based on your monthly NHS income, dispensing patterns, and operating costs — not a generic bank credit score.',
-      'Unlike standard overdrafts, these facilities are built for NHS-linked businesses and priced to reflect the low credit risk inherent in NHS income.',
+      'Revolving credit facility: Works like a flexible loan, allowing you to draw down and repay funds as needed, paying interest only on the balance you use at any given time.',
+      'Business overdraft: Provides access to an agreed borrowing limit linked to your business current account, offering short-term flexibility to cover temporary cash flow fluctuations. Interest is typically charged only on the amount overdrawn, although fees may also apply.',
+      'Invoice finance: Releases cash against your NHS FP34 income before payment is received, reducing the gap between dispensing prescriptions and receiving NHS funds.',
+      'Funding limits: Facilities are typically sized based on your monthly NHS income, dispensing patterns and operating costs, rather than relying solely on a generic business credit score.',
+      'Designed for pharmacies: Specialist lenders understand the predictability of NHS income, meaning funding solutions can often be tailored to the cash flow needs of pharmacy businesses.',
     ],
     suitable: [
       'Your pharmacy regularly experiences a cash flow gap between month-start and the NHS payment date',
@@ -318,7 +318,7 @@ const DETAIL = {
       { n: '01', title: 'Cash flow review', text: 'Share your monthly NHS income and typical expenditure pattern. A simple one-page cash flow summary is sufficient to begin.' },
       { n: '02', title: 'FP34 data', text: 'We use your dispensing data to size the facility correctly and build the lender submission around your actual income patterns.' },
       { n: '03', title: 'Lender approach', text: 'We approach specialist lenders with NHS income-linked working capital products — not generic business loan providers.' },
-      { n: '04', title: 'Facility agreed', text: 'Revolving credit or invoice-based facility, sized to your real needs and structured for maximum flexibility.' },
+      { n: '04', title: 'Facility agreed', text: 'Revolving credit, business overdraft or invoice-based facility, sized to your real needs and structured for maximum flexibility.' },
       { n: '05', title: 'Drawdown', text: 'Access funds within the agreed facility as and when required. Repay when NHS payments arrive each month.' },
       { n: '06', title: 'Ongoing management', text: 'Facility reviewed as your dispensing volumes grow. We remain your point of contact for any changes or queries.' },
     ],
