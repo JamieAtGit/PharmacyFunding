@@ -445,6 +445,7 @@ footer ul li a:hover { color: #3dd99a; }
 @media (max-width: 480px) {
   .choices     { grid-template-columns: 1fr; }
   .util        { display: none; }
+  .map-overlay { min-width: 0; padding: 16px 20px; }
   .slogan-text { white-space: normal; text-align: center; }
   .slogan-rule { display: none; }
   .slogan-inner { flex-wrap: wrap; justify-content: center; gap: 8px; }
@@ -496,7 +497,7 @@ footer ul li a:hover { color: #3dd99a; }
 }
 .fca-strip .wrap { display: flex; align-items: center; gap: 36px; }
 .fca-badge {
-  display: flex; align-items: center; gap: 14px; flex-shrink: 0;
+  display: flex; align-items: center; gap: 14px; min-width: 0; max-width: 400px;
   background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1);
   border-radius: var(--radius); padding: 12px 20px;
 }
@@ -507,7 +508,7 @@ footer ul li a:hover { color: #3dd99a; }
 }
 .fca-icon svg { width: 19px; height: 19px; stroke: white; fill: none; stroke-width: 2.5; }
 .fca-label { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.38); }
-.fca-val { font-size: 14px; font-weight: 700; color: rgba(255,255,255,.9); margin-top: 2px; }
+.fca-val { font-size: 14px; font-weight: 700; color: rgba(255,255,255,.9); margin-top: 2px; line-height: 1.5; }
 .fca-reg { font-size: 11px; color: rgba(255,255,255,.38); margin-top: 1px; }
 .fca-strip-divider { width: 1px; height: 44px; background: rgba(255,255,255,.1); flex-shrink: 0; }
 .fca-trust-items { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 40px; }
@@ -756,8 +757,8 @@ footer ul li a:hover { color: #3dd99a; }
 .map-overlay {
   position: absolute; top: 16px; left: 16px;
   background: rgba(255,255,255,.96); backdrop-filter: blur(8px);
-  border: 1.5px solid var(--border); border-radius: var(--radius); padding: 20px 26px;
-  box-shadow: var(--shadow);
+  border: 1.5px solid var(--border); border-radius: var(--radius); padding: 22px 44px;
+  box-shadow: var(--shadow); min-width: 360px; max-width: calc(100% - 32px);
 }
 .map-overlay .mo-name { font-size: 17px; font-weight: 700; color: var(--ink); }
 .map-overlay .mo-addr { font-size: 14px; color: var(--ink-soft); margin-top: 5px; line-height: 1.6; }
