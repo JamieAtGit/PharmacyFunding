@@ -1,0 +1,4 @@
+# Netlify redirects — force HTTPS and canonical domain
+http://www.pharmacyfunding.co.uk/*  https://www.pharmacyfunding.co.uk/:splat  301!
+http://pharmacyfunding.co.uk/*      https://www.pharmacyfunding.co.uk/:splat  301!
+https://pharmacyfunding.co.uk/*     https://www.pharmacyfunding.co.uk/:splat  301!

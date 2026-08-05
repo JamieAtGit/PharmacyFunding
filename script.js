@@ -143,7 +143,7 @@ const DETAIL = {
     similar: ['group-growth', 'buyin', 'property'],
   },
   'group-growth': {
-    image: 'images/cargo-ship.jpg', imagePos: 'center 40%', optNum: '02',
+    image: 'images/pharmacist-tablet.jpg', imagePos: 'center 30%', optNum: '02',
     what: 'Group Growth and M&A Finance is built for pharmacy operators who already own one or more pharmacies and want to expand through further acquisition, portfolio deals, or structured mergers. Lenders in this space assess your combined dispensing data and group accounts — not each site in isolation — giving experienced operators greater borrowing power.',
     how: [
       'Your group\'s consolidated income across all sites is used to assess affordability, often unlocking more than a single-site assessment would allow.',
@@ -195,7 +195,7 @@ const DETAIL = {
     similar: ['property', 'working-capital', 'group-growth'],
   },
   property: {
-    image: 'images/pharmacy-counter.jpg', imagePos: 'center 30%', optNum: '04',
+    image: 'images/pharmacist-clipboard.jpg', imagePos: 'center 25%', optNum: '04',
     what: 'Commercial Property Finance covers the purchase of the freehold of your pharmacy premises, a commercial mortgage to refinance existing property debt, or finance for mixed-use buildings where your pharmacy occupies the ground floor. Owning your freehold removes lease renewal uncertainty.',
     how: [
       'Lenders assess property value, the strength of the tenancy (underpinned by NHS income), and your ability to service the debt.',
