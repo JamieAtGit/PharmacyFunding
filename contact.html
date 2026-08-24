@@ -115,14 +115,15 @@
         </div>
 
         <div>
-          <form id="enquiry" novalidate>
+          <form id="enquiry" name="enquiry" data-netlify="true" novalidate>
+            <input type="hidden" name="form-name" value="enquiry">
             <div class="frow">
-              <div class="field"><label for="fn">Full name</label><input id="fn" type="text" placeholder="Jane Doe" required></div>
-              <div class="field"><label for="fp">Phone number</label><input id="fp" type="tel" placeholder="07700 900 000"></div>
+              <div class="field"><label for="fn">Full name</label><input id="fn" name="name" type="text" placeholder="Jane Doe" required></div>
+              <div class="field"><label for="fp">Phone number</label><input id="fp" name="phone" type="tel" placeholder="07700 900 000"></div>
             </div>
-            <div class="field"><label for="fe">Email address</label><input id="fe" type="email" placeholder="you@yourpharmacy.co.uk" required></div>
+            <div class="field"><label for="fe">Email address</label><input id="fe" name="email" type="email" placeholder="you@yourpharmacy.co.uk" required></div>
             <div class="field"><label for="ft">What do you need funding for?</label>
-              <select id="ft">
+              <select id="ft" name="funding-type">
                 <option value="">Please choose&hellip;</option>
                 <option>Buying my first pharmacy</option>
                 <option>Acquiring a further pharmacy / group growth</option>
@@ -135,7 +136,7 @@
                 <option>Something else</option>
               </select>
             </div>
-            <div class="field"><label for="fm">Tell us about your pharmacy and what you're looking to achieve</label><textarea id="fm" placeholder="A little about your pharmacy, any amounts in mind, timescales — whatever is helpful&hellip;"></textarea></div>
+            <div class="field"><label for="fm">Tell us about your pharmacy and what you're looking to achieve</label><textarea id="fm" name="message" placeholder="A little about your pharmacy, any amounts in mind, timescales — whatever is helpful&hellip;"></textarea></div>
             <button type="submit" class="cta-btn" style="width:100%;justify-content:center">Send enquiry
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>

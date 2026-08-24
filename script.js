@@ -811,9 +811,16 @@ function initContactForm() {
 
   form.addEventListener('submit', e => {
     e.preventDefault();
-    form.style.display = 'none';
-    thanks.classList.add('show');
-    window.scrollTo({ top: thanks.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+    const data = new URLSearchParams(new FormData(form)).toString();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: data,
+    }).finally(() => {
+      form.style.display = 'none';
+      thanks.classList.add('show');
+      window.scrollTo({ top: thanks.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+    });
   });
 }
 
